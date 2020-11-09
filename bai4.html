@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>
+        Chu Vi Hình Tròn
+    </h2>
+    <p>Gõ bán kính hình tròn</p>
+    <p>
+        <!-- oninput Execute a JavaScript when a user writes something in an <input> field: -->
+       <input id="inputRadius" type="number" placeholder="Input Radius Here" oninput="calculateCircleArea(this.value)" onchange="calculateCircleArea(this.value)">
+       <p>Chu Vi Hình Tròn là:<span id="area"></span></p> 
+    </p>
+    <script>
+        function calculateCircleArea(val){
+            val = parseInt(val);
+            document.getElementById("area").innerHTML = "" + 2*val*3.14;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>
+        Temperature Converter
+    </h2>
+    <p>Type a value in the Fahrenheit field to convert the value to Celsius:</p>
+    <p>
+        <!-- oninput Execute a JavaScript when a user writes something in an <input> field: -->
+        <input id="inputFahrenheit" type="number" placeholder="Input °F" oninput="convertFtoC(this.value)" onchange="convertFtoC(this.value)">
+       <p>Celius:<span id="celiusOutPut"></span></p> 
+    </p>
+    <p>
+        <!-- oninput Execute a JavaScript when a user writes something in an <input> field: -->
+        <input id="inputCelius" type="number" placeholder="Input °C" oninput="convertCtoF(this.value)" onchange="convertCtoF(this.value)">
+       <p>fahrenheit:<span id="fahrenheitOutPut"></span></p> 
+    </p>
+    <script>
+        function convertFtoC(valnumber) {
+            valnumber = parseFloat(valnumber);
+            document.getElementById("celiusOutPut").innerHTML = (valnumber-32)/1.8 + "°C";
+        }
+        function convertCtoF(valnumber) {
+            valnumber = parseFloat(valnumber);
+            document.getElementById("fahrenheitOutPut").innerHTML = (valnumber * 9)/5 + 32 + "°C";
+        }
+    </script>
+</body>
+
+</html>

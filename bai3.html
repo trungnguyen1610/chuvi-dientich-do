@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dien tich hinh tron</title>
+</head>
+<body>
+    <h2>
+        Diện Tích Hình Tròn
+    </h2>
+    <p>Gõ bán kính hình tròn</p>
+    <p>
+        <!-- oninput Execute a JavaScript when a user writes something in an <input> field: -->
+       <input id="inputRadius" type="number" placeholder="Input Radius Here" oninput="calculateCircleArea(this.value)" onchange="calculateCircleArea(this.value)">
+       <p>Diện Tích Hình Tròn là:<span id="area"></span></p> 
+    </p>
+    <p> Hoặc Gõ Đường kính hình tròn</p>
+    <p>
+        <!-- oninput Execute a JavaScript when a user writes something in an <input> field: -->
+       <input id="inputD" type="number" placeholder="Input D Here" oninput="calculateCircleAreaD(this.value)" onchange="calculateCircleAreaD(this.value)">
+       <p>Diện Tích Hình Tròn là:<span id="area2"></span></p> 
+    </p>
+    <script>
+        function calculateCircleArea(val){
+            val = parseInt(val);
+            document.getElementById("area").innerHTML = "" + val*val*3.14;
+        }
+        function calculateCircleAreaD(val){
+            val = parseInt(val);
+            document.getElementById("area2").innerHTML = "" + (val*val)/4 *3.14;
+        }
+    </script>
+</body>
+</html>

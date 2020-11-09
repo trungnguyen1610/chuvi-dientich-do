@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        do {
+           var physic = parseInt(window.prompt("Xin Nhập vào điểm lý từ 0->10", ""), 10);
+           var chemistry = parseInt(window.prompt("Xin Nhập vào điểm hoá từ 0->10", ""), 10);
+           var biology = parseInt(window.prompt("Xin Nhập vào điểm sinh 0->10", ""), 10);
+        } while ((isNaN(physic) || isNaN(chemistry)  || isNaN(biology)) || (physic < 1 || chemistry < 1 || biology <1) ||(physic>10 || chemistry>10 || biology>10));
+        let avg = (physic + chemistry + biology)/3;
+        document.write("điểm trung bình là " + avg);
+    </script>
+</body>
+
+</html>
